@@ -1,0 +1,119 @@
+﻿html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ddd;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    font-family: "Quicksand", sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 1;
+    padding: 50px 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 1.5;
+    padding: 10px;
+}
+
+h3 {
+    font-size: larger;
+    padding: 10px;
+}
+
+h4 {
+    font-size: larger;
+    padding: 10px;
+}
+ p {
+     padding: 10px;
+ }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img:focus {
+    /* FIXME show alt text when hovering */
+}
+
+#photography img {
+    max-width: 30%;
+    height: auto;
+    max-height: 300px;
+}
+
+footer img {
+    max-height: 60px;
+    max-width: 60px;
+}
+
+#copyright {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+nav li {
+    display: inline;
+    padding: 10px;
+}
+
+nav a {
+    font-size: 22px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none /*remove the underline*/;
+}
+
+nav a:hover {
+    text-decoration: underline /*add the underline*/;
+}
+
+.skip a {
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute /*position relative to the parent */;
+    top: -40px /*place 40px higher */;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+}
+
+.skip a:focus {
+    position: absolute;
+    top: 0px; /* bring skip tab down */
+}
+
+a:focus {
+    border: 2px solid black;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    grid-column: 1 / -1; 
+    grid-row: 7;
+    padding: 20px;
+    text-align: left;
+}
+
+
+/* moblie view */
+
+
+
+
+/* desktop view */
