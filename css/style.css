@@ -11,16 +11,33 @@ body {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 55px;
+    font-weight: 900;
     line-height: 1;
     padding: 50px 0;
     text-align: center;
 }
 
+header p {
+    font-size: 21px;
+    font-weight: 900;
+}
+
+.head_caption {
+    color: lightgray;
+    font-size: 12px;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+}
+
 h2 {
-    font-size: 40px;
+    font-size: 45px;
     line-height: 1.5;
     padding: 10px;
+    text-align: center;
+    padding-left: 40px;
+    /*background-color: #a9a9a9;*/
 }
 
 h3 {
@@ -41,14 +58,8 @@ img {
     height: auto;
 }
 
-img:focus {
-    /* FIXME show alt text when hovering */
-}
-
 #photography img {
-    max-width: 30%;
-    height: auto;
-    max-height: 300px;
+    max-height: 100%;
 }
 
 footer img {
@@ -60,27 +71,30 @@ footer img {
     text-align: center;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 10px;
-}
-
-nav li {
-    display: inline;
-    padding: 10px;
+nav {
+    text-align: right;
 }
 
 nav a {
+    display: inline-block;
+    background: 0;
     font-size: 22px;
     color: black;
     font-weight: bold;
+    padding: 0px;
     text-decoration: none /*remove the underline*/;
+    transition: background 0.25s, color 0.25s;
 }
 
 nav a:hover {
-    text-decoration: underline /*add the underline*/;
+    color: white;
+    background: black;
 }
 
+nav a:active {
+     background-color: dimgray; /*FIXME*/
+ }
+ 
 .skip a {
     background: white;
     left: 0;
@@ -101,19 +115,255 @@ a:focus {
     border: 2px solid black;
 }
 
-footer {
-    background-color: black;
-    color: white;
-    grid-column: 1 / -1; 
-    grid-row: 7;
-    padding: 20px;
-    text-align: left;
+a {
+    color: #bcdfeb;
 }
 
 
+
+/*--------------------------------------------------------------------*/
 /* moblie view */
 
+main {
+    display: flex;
+    flex-flow: column;
+}
+
+/* Format the nav class */
+nav {
+    text-align: center;
+    align-self: center;
+    flex-direction: row;
+    background-color: #ddd;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+nav a {
+    padding: 15px;
+}
+#favicon {
+    max-height: 30px; /*FIXME*/
+}
+
+header {
+    background-attachment: fixed; /* Parallax effect */
+    background-image: url("../images/headerimg.jpg"); /*Link to header.jpg in the images folder */
+    background-position: center; /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover; /* Parallax effect */
+    color: white;
+    height: 500px; /* Parallax effect */
+    /*width: 100%;*/
+    text-align: center;
+    padding-top: 200px;
+}
+
+#about {
+    align-self: center;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+}
+#about div {
+    display: inline-block;
+    vertical-align: middle;
+}
+#about > div:last-of-type {
+    width: 65%;
+    text-align: left;
+    margin-left: 20px;
+}
+#about h2 {
+    text-align: left;
+}
+#about p {
+    padding: 20px 40px;
+    line-height: 1.7em;
+    max-width: 700px;
+}
+#about img {
+    max-width: 100%;
+    padding: 15px 15px;
+    padding-right: 10px;
+    background: white;
+    z-index: -1;
+}
+.overlay-sect {
+    position: relative;
+    width: 40%;
+}
+.overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(51,25,76,0.6);
+    color: #f1f1f1;
+    width: 85%;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    padding: 16px;
+    text-align: center;
+    border-radius: 8px;
+}
+.overlay-sect:hover .overlay {
+    opacity: 1;
+}
+
+
+#work {
+    padding: 10px;
+    text-align: center;
+    background-color: #c6c6c6;
+}
+#work img {
+    max-width: 75%;
+    padding: 10px;
+    border-radius: 35px;
+    padding-bottom: 25px;
+}
+
+#photography {
+    background-color: #a9a9a9;
+}
+#photography h2 {
+    padding-left: 60px;
+}
+.photo_container {
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 30px;
+}
+.photo_container img {
+    /*object-fit: cover;*/
+    display: inline-block;
+    height: 200px;
+    border-radius: 8px;
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    transform: scale(1);
+    transition: transform 0.5s;
+
+}
+.photo_container img:hover {
+    transform: scale(1.4);
+    position: relative;
+    z-index: 2;
+}
+
+
+#contactme {
+    background-color: dimgray;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+#contactme a {
+    color: white;
+}
+#contactme form, #contactme > div {
+    width: 45%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    min-width: 315px;
+}
+form {
+    vertical-align: middle;
+    padding: 15px 25px;
+    text-align: right;
+}
+fieldset {
+    font-size: 1.2em;
+    display: inline-block;
+    text-align: left;
+    line-height: 2em;
+}
+#contactInfo img {
+    max-width: 60px;
+}
+#emailIcon {
+    width: 50px;
+    padding: 5px;
+    border-radius: 9px;
+}
+#instaIcon {
+    width: 55px;
+}
+#contactInfo h4, #contactInfo p, #contactInfo img {
+    display: inline-block;
+    vertical-align: middle;
+}
+#contactInfo {
+    padding: 25px 5px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
 
 
+/*---------------------------------------------------------------------*/
 /* desktop view */
+
+/*Add the first media query. */
+@media only screen and (min-width: 800px) {
+
+    main {
+        display: flex;
+        flex-flow: column;
+    }
+    main > about {
+        margin: 30px;
+    }
+
+    nav {
+        text-align: right;
+        align-self: center;
+    }
+    nav a {
+        padding: 20px;
+    }
+
+    h2 {
+        text-align: left;
+    }
+
+    #about {
+        align-self: center;
+        background-color: white;
+        padding: 10px;
+        text-align: center;
+        margin: 0px 30px;
+    }
+    #about > div:last-of-type {
+        width: 55%;
+        text-align: left;
+        margin-left: 30px;
+    }
+    .overlay {
+        padding: 20px;
+        left: 35px;
+    }
+
+    #work {
+        padding: 20px 60px;
+        text-align: left;
+    }
+    #work h3 {
+        padding-top: 30px;
+    }
+    #work img {
+        display: inline-block;
+        /*background-color: red;*/
+        max-width: 30%;
+    }
+
+
+    #contactme {
+        padding: 20px;
+    }
