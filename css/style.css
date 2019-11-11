@@ -343,6 +343,10 @@ footer {
         text-align: left;
     }
 
+    #work {
+        text-align: center;
+    }
+
 }
 
 /*END tablet media query*/
