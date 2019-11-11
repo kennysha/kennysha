@@ -342,9 +342,10 @@ footer {
         display: flex;
         flex-flow: column;
     }
-    main > about {
-        margin: 30px;
-    }
+
+        main > about {
+            margin: 30px;
+        }
 
     h1 {
         font-size: 64px;
@@ -354,12 +355,15 @@ footer {
         display: flex;
         flex-direction: row;
     }
-    nav a {
-        padding: 20px;
-    }
+
+        nav a {
+            padding: 20px;
+        }
+
     .flip-card:focus {
         border-color: black;
     }
+
     .flip-card {
         display: block;
         width: 30%;
@@ -368,6 +372,7 @@ footer {
         background-color: transparent;
         perspective: 1000px;
     }
+
     .flip-card-inner {
         position: relative;
         width: 100%;
@@ -375,18 +380,22 @@ footer {
         transition: transform 0.8s;
         transform-style: preserve-3d;
     }
+
     .flip-card:hover .flip-card-inner {
         transform: rotateX(180deg);
     }
+
     .flip-card-front, .flip-card-back {
         position: absolute;
         width: 100%;
         height: 100%;
         backface-visibility: hidden;
     }
+
     .flip-card-front {
         padding-left: 10px;
     }
+
     .flip-card-back {
         transform: rotateX(180deg);
     }
@@ -407,14 +416,16 @@ footer {
         text-align: center;
         margin: 0px 30px;
     }
-    #about h2 {
-        text-align: left;
-    }
-    #about > div:last-of-type {
-        width: 55%;
-        text-align: left;
-        margin-left: 30px;
-    }
+
+        #about h2 {
+            text-align: left;
+        }
+
+        #about > div:last-of-type {
+            width: 55%;
+            text-align: left;
+            margin-left: 30px;
+        }
 
     .overlay {
         padding: 20px;
@@ -425,38 +436,46 @@ footer {
         padding: 30px;
         text-align: left;
     }
-    #work h3 {
-        padding: 30px;
-        display: block;
-        width: 100%;
-    }
+
+        #work h3 {
+            padding: 30px;
+            display: block;
+            width: 100%;
+        }
+
     .img-description {
         display: flex;
         align-content: center;
         flex-direction: row;
         padding: 0px 50px;
     }
+
     .work-ol {
         display: inline-block;
         align-items: center;
         vertical-align: middle;
     }
+
     #work ol {
         display: inline-block;
     }
+
     .work-img {
         width: 45%;
         /*display: flex;*/
         vertical-align: middle;
     }
+
     .work-ol {
         width: 55%;
     }
+
     #work img {
         align-content: center;
         padding: 10px;
         height: auto;
     }
+
     #work h2 {
         padding-left: 0px;
     }
@@ -465,3 +484,4 @@ footer {
     #contactme {
         padding: 20px;
     }
+}
