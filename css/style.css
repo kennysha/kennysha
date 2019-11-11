@@ -334,17 +334,15 @@ footer {
 /*---------------------------------------------------------------------*/
 
 /*tablet media query*/
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 700px) {
 
+    h2 {
+        text-align: left;
+    }
     #about h2 {
         text-align: left;
     }
 
-    .work-img {
-        width: 50%;
-        /*display: flex;*/
-        vertical-align: middle;
-    }
 }
 
 /*END tablet media query*/
