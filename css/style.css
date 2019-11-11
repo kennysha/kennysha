@@ -330,22 +330,37 @@ footer {
     text-align: center;
 }
 
-
-
+/*END mobile media query*/
 /*---------------------------------------------------------------------*/
-/* desktop view */
 
-/*Add the first media query. */
+/*tablet media query*/
 @media only screen and (min-width: 800px) {
+
+    #about h2 {
+        text-align: left;
+    }
+
+    .work-img {
+        width: 50%;
+        /*display: flex;*/
+        vertical-align: middle;
+    }
+}
+
+/*END tablet media query*/
+/*-----------------------------------------------------------*/
+
+/* desktop view */
+@media only screen and (min-width: 900px) {
 
     main {
         display: flex;
         flex-flow: column;
     }
 
-        main > about {
-            margin: 30px;
-        }
+    main > about {
+        margin: 30px;
+    }
 
     h1 {
         font-size: 64px;
@@ -356,9 +371,9 @@ footer {
         flex-direction: row;
     }
 
-        nav a {
-            padding: 20px;
-        }
+    nav a {
+        padding: 20px;
+    }
 
     .flip-card:focus {
         border-color: black;
@@ -471,7 +486,7 @@ footer {
     }
 
     #work img {
-        align-content: center;
+        vertical-align: middle;
         padding: 10px;
         height: auto;
     }
@@ -486,7 +501,9 @@ footer {
     }
 }
 
+/*END desktop media query*/
 /*----------------------------------------------------------*/
+
 
 /* reduce motion */
 @media screen and (prefers-reduced-motion: reduce) {
@@ -505,9 +522,9 @@ footer {
         z-index: 5;
     }
 
-    .skip a:focus {
-        top: 0;
-    }
+        .skip a:focus {
+            top: 0;
+        }
 
     .flip-card-inner {
         position: relative;
@@ -540,5 +557,4 @@ footer {
         transform: scale(1);
         transition: none;
     }
-
 }
