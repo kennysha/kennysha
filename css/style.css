@@ -277,7 +277,7 @@ header {
     background-color: dimgray;
     color: white;
     padding: 20px;
-    text-align: center;
+    text-align: left;
 }
 #contactme h2 {
     padding-left: 10px;
@@ -286,7 +286,7 @@ header {
 #contactme a {
     color: white;
 }
-#contactme form, #contactme > div {
+/*#contactme form, #contactme > div {
     width: 45%;
     display: inline-block;
     vertical-align: middle;
@@ -297,30 +297,27 @@ form {
     vertical-align: middle;
     padding: 15px 25px;
     text-align: right;
-}
-fieldset {
+}*/
+/*fieldset {
     font-size: 1.2em;
     display: inline-block;
     text-align: left;
     line-height: 2em;
-}
+}*/
 #contactInfo img {
-    max-width: 60px;
+    max-width: 50px;
 }
-#emailIcon {
-    width: 50px;
-    padding: 5px;
-    border-radius: 9px;
+#linkedInIcon {
+    border-radius: 8px;
 }
-#instaIcon {
-    width: 55px;
-}
-#contactInfo h4, #contactInfo p, #contactInfo img {
+#contactInfo p, #contactInfo img {
     display: inline-block;
     vertical-align: middle;
 }
 #contactInfo {
-    padding: 25px 5px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 5px;
 }
 
 footer {
